@@ -95,13 +95,14 @@ void setup(void) {
   // PLACE YOUR APPLICATION CODE BELOW
   // ===============================================
 
-  // Example webserver hosting table with known Husarnet Hosts
+  // Example webserver hosting table with known Husarnet Hostss
+  /*
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {
     request->send(200, "text/html", index_html);
-  });
+  });*/
 
-  Serial1.println("🚀 HTTP server started\r\n");
-  Serial1.printf("Visit:\r\nhttp://%s:%d/\r\n\r\n", hostName, HTTP_PORT);
+ // Serial1.println("🚀 HTTP server started\r\n");
+ // Serial1.printf("Visit:\r\nhttp://%s:%d/\r\n\r\n", hostName, HTTP_PORT);
 
   Serial1.printf("Known hosts:\r\n");
   for (auto const &host : Husarnet.listPeers()) {
