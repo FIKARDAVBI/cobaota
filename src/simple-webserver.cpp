@@ -108,6 +108,12 @@ void setup(void) {
   for (auto const &host : Husarnet.listPeers()) {
     Serial1.printf("%s (%s)\r\n", host.second.c_str(), host.first.toString().c_str());
   }
+  pinMode(2,OUTPUT);
 }
 
-void loop(void) { ; }
+void loop(void) { ;
+  digitalWrite(2,HIGH);
+  delay(1000);
+  digitalWrite(2,HIGH);
+  delay(1000);
+}
